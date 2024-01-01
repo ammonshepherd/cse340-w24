@@ -1,18 +1,18 @@
   <div class="card login">
     <h1>Register</h1>
     <p>All fields are required</p>
-    <form action="/accounts/" method="post">
+    <form action="/account/register" method="post">
       <label for="firstname">
-        <input type="text" id="firstname" name="client_firstname" placeholder="First Name" required>
+        <input type="text" id="firstname" name="account_firstname" placeholder="First Name" required>
       </label>
       <label for="lastname">
-        <input type="text" id="lastname" name="client_lastname" placeholder="Last Name" required>
+        <input type="text" id="lastname" name="account_lastname" placeholder="Last Name" required>
       </label>
       <label for="email">
-        <input type="email" id="email" name="client_email" placeholder="Email Address" required>
+        <input type="email" id="email" name="account_email" placeholder="Email Address" required>
       </label>
       <label for="password">
-        <input type="password" id="password" name="client_password" placeholder="Password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+        <input type="password" id="password" name="account_password" placeholder="Password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
         <p class="login_pass_note">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</p> 
       </label>
       <input class="register_submit" type="submit" value="Register">

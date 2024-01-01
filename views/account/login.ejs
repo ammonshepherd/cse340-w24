@@ -7,10 +7,10 @@
 <h1>Login</h1>
 <form action="/accounts/" method="post">
     <label for="email">
-    <input type="email" id="email" name="clientEmail" placeholder="Email Address" required>
+    <input type="email" id="email" name="client_email" placeholder="Email Address" required>
     </label>
     <label for="password">
-    <input type="password" id="password" name="clientPassword" placeholder="Password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+    <input type="password" id="password" name="client_password" placeholder="Password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
     <span class="login_pass_note">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</span>
     </label>
     <input class="login_submit" type="submit" value="Login">

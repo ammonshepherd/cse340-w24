@@ -163,6 +163,10 @@ footer p {
   'opsz' 48
 }
 
+.site-name a {
+  font-size: 80px;
+}
+
 /* *******************
 * Home Page Styles
 *********************/
@@ -257,14 +261,15 @@ footer p {
   margin: 4px 0px 20px 0px;
 }
 .login input {
-  font-size: 1rem;
-  padding: 8px;
+  font-size: 1.2rem;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 .login_submit {
   background-color: #4c96d7;
   color: #fff;
+  width: 40%;
 }
 .login_submit:hover {
   background-color:#366fba;
@@ -336,7 +341,7 @@ footer p {
 }
 
 /* *************************
-* Vechicle Managment Pages
+* Vehicle Management Pages
 ***************************/
 .vehicle-management {
   padding: 20px;
@@ -683,6 +688,9 @@ max-width: 75vw;
   .login form {
     font-size: 2rem;
     padding: 20px 40px;
+  }
+  .login form input {
+    padding: 14px;
   }
 
   .add-vehicle, .add-class {

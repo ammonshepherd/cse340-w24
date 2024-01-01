@@ -131,6 +131,14 @@ footer p {
   background-color:rgb(200, 230, 250);
 }
 
+input:required:invalid, input:focus:invalid {
+  border: 1px solid rgb(110, 1,1);
+}
+
+input:required:valid {
+  border: 1px solid rgb(211, 254, 211);
+}
+
 /* *******************
 * General Styles
 **********************/

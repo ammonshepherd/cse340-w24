@@ -12,8 +12,8 @@
         <input type="email" id="email" name="account_email" placeholder="Email Address" required>
       </label>
       <label for="password">
-        <input type="password" id="password" name="account_password" placeholder="Password" pattern="(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
-        <p class="login_pass_note">Passwords must be at least 8 characters and contain at least 1 number, 1 capital letter and 1 special character</p> 
+        <p class="login_pass_note">Password must be at least 12 characters, one must be a number, one must be a lowercase letter, one must be a capital letter, and one must be a non-alphanumeric character.</p> 
+        <input type="password" id="password" name="account_password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$" required>
       </label>
       <input class="register_submit" type="submit" value="Register">
     </form>

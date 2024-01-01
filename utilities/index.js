@@ -28,7 +28,7 @@ Util.getNav = async function (req, res, next) {
 // Modified from above to not use lists for the navigation
 Util.getNav = async function (req, res, next) {
   let data = await invModel.getClassifications()
-  let list = '<a href="/" title="Home page">Home</a></li>'
+  let list = '<a href="/" title="Home page">Home</a>'
   data.rows.forEach((row) => {
     list +=
       '<a href="/inv/type/' +
@@ -73,6 +73,25 @@ Util.buildClassificationGrid = async function(data){
     grid += '<p class="notice">Sorry, no matching vehicles could be found.</p>'
   }
   return grid
+}
+
+
+/* **************************************
+* Build the vehicle view HTML
+* ************************************ */
+Util.buildVehicleView = async function(data){
+  let price = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'})
+  let view = '<div class="card vehicle-card">'
+    view += '<div id="vehicle-image"><img src="' + data[0].inv_image + '" alt="photo of a ' + data[0].inv_make + ' ' + data[0].inv_model + '"></div>'
+    view += '<div class="vehicle-info">'
+      view += '<h1>' + data[0].inv_year + ' ' + data[0].inv_make + ' ' + data[0].inv_model + '</h1>'
+      view += "<h2 id='vehicle-price'>No Haggle Price <span id='price'>" + price.format(data[0].inv_price) + "</span></h2>"
+      view += '<p><b>Miles:</b> ' + Intl.NumberFormat('en-US').format(data[0].inv_miles) + '</p>'
+      view += '<p><b>Color:</b> ' + data[0].inv_color + '</p>'
+      view += '<p>' + data[0].inv_description + '</p>'
+    view += '</div>'
+  view += '</div>'
+  return view
 }
 
 

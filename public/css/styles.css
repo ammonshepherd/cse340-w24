@@ -456,6 +456,18 @@ footer p {
 #vehicle-image {
   order:1;
 }
+#vehicle-price {
+  font-weight: bold;
+  padding: 40px 0px;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  background-color: #dbe8f3;
+}
+#price {
+  margin-left: 40px;
+}
+
 .thumbnails {
   order: 2;
 }
@@ -722,8 +734,8 @@ max-width: 75vw;
   }
   .vehicle-info {
     order: 3;
+    border: none;
   }
-
   .image-display {
     display: flex;
     flex-flow: row;
